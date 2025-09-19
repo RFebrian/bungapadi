@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunga Padi - Platform Donasi Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1200x600/a3e635/f0fdf4?text=Anak-anak+Tersenyum');
+            background-size: cover;
+            background-position: center;
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-600">Bunga Padi</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-teal-600 transition duration-300">Beranda</a>
+                <a href="#about" class="text-gray-600 hover:text-teal-600 transition duration-300">Tentang Kami</a>
+                <a href="#campaigns" class="text-gray-600 hover:text-teal-600 transition duration-300">Kampanye</a>
+                <a href="#contact" class="text-gray-600 hover:text-teal-600 transition duration-300">Kontak</a>
+            </div>
+            <div id="auth-section">
+                <button id="login-btn" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition duration-300">
+                    <i class="fas fa-user mr-2"></i>Login
+                </button>
+            </div>
+             <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-teal-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-teal-50">Beranda</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-teal-50">Tentang Kami</a>
+            <a href="#campaigns" class="block py-2 px-4 text-sm text-gray-600 hover:bg-teal-50">Kampanye</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-teal-50">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white h-[70vh] sm:h-[60vh] flex items-center">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Kebaikan Anda, Harapan Mereka</h1>
+                <p class="text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto">Setiap donasi membawa perubahan besar bagi mereka yang membutuhkan. Mari bergandengan tangan untuk masa depan yang lebih baik.</p>
+                <a href="#campaigns" class="bg-orange-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300 text-md sm:text-lg">Donasi Sekarang</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-teal-600">Tentang BantuBersama</h2>
+                    <p class="text-gray-600 mt-2">Misi kami adalah menjembatani kebaikan Anda kepada yang membutuhkan.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/38bdf8/ffffff?text=Tim+Kami" alt="[Gambar tim sukarelawan sedang bekerja]" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">Siapa Kami?</h3>
+                        <p class="text-gray-600 mb-4">BantuBersama adalah organisasi nirlaba yang didedikasikan untuk memberikan bantuan di bidang pendidikan, kesehatan, dan kemanusiaan. Kami percaya bahwa setiap orang berhak mendapatkan kesempatan untuk hidup yang lebih baik.</p>
+                        <p class="text-gray-600">Sejak 2020, kami telah menyalurkan ribuan bantuan berkat dukungan para donatur hebat seperti Anda. Transparansi dan akuntabilitas adalah pilar utama kami dalam setiap langkah.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campaigns Section -->
+        <section id="campaigns" class="py-16 md:py-20 bg-teal-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-teal-600">Kampanye Mendesak</h2>
+                    <p class="text-gray-600 mt-2">Bantuan Anda sangat berarti sekarang.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Campaign Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x250/fb923c/ffffff?text=Pendidikan+Anak" alt="[Gambar anak-anak sedang belajar di sekolah darurat]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Pendidikan untuk Pelosok</h3>
+                            <p class="text-gray-600 text-sm mb-4">Bantu kami membangun sekolah dan menyediakan perlengkapan belajar bagi anak-anak di daerah terpencil.</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                                <div class="bg-teal-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span>Terkumpul: <strong>Rp 75.000.000</strong></span>
+                                <span>Target: Rp 100.000.000</span>
+                            </div>
+                            <button class="donate-btn mt-4 w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition duration-300">Donasi</button>
+                        </div>
+                    </div>
+                    <!-- Campaign Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x250/4ade80/ffffff?text=Bantuan+Medis" alt="[Gambar tim medis merawat pasien]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Klinik Keliling Sehat</h3>
+                            <p class="text-gray-600 text-sm mb-4">Menyediakan layanan kesehatan gratis bagi masyarakat yang tidak memiliki akses ke fasilitas medis.</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                                <div class="bg-teal-600 h-2.5 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span>Terkumpul: <strong>Rp 90.000.000</strong></span>
+                                <span>Target: Rp 200.000.000</span>
+                            </div>
+                            <button class="donate-btn mt-4 w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition duration-300">Donasi</button>
+                        </div>
+                    </div>
+                    <!-- Campaign Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/400x250/f87171/ffffff?text=Air+Bersih" alt="[Gambar warga desa mengambil air bersih dari sumur baru]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Air Bersih untuk Semua</h3>
+                            <p class="text-gray-600 text-sm mb-4">Pembangunan sumur bor dan fasilitas sanitasi untuk desa-desa yang mengalami kekeringan.</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                                <div class="bg-teal-600 h-2.5 rounded-full" style="width: 60%"></div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span>Terkumpul: <strong>Rp 120.000.000</strong></span>
+                                <span>Target: Rp 200.000.000</span>
+                            </div>
+                            <button class="donate-btn mt-4 w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition duration-300">Donasi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                 <h2 class="text-3xl font-bold text-teal-600">Hubungi Kami</h2>
+                 <p class="text-gray-600 mt-2 mb-8">Kami siap menjawab pertanyaan Anda.</p>
+                 <p class="text-lg">Email: <a href="mailto:info@bantubersama.org" class="text-teal-600 hover:underline">info@bantubersama.org</a></p>
+                 <p class="text-lg">Telepon: <span class="text-teal-600">(+62)85224-234-234</span></p>
+                 <div class="mt-6 space-x-4">
+                     <a href="#" class="text-teal-600 hover:text-orange-500 text-2xl"><i class="fab fa-facebook"></i></a>
+                     <a href="#" class="text-teal-600 hover:text-orange-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                     <a href="#" class="text-teal-600 hover:text-orange-500 text-2xl"><i class="fab fa-twitter"></i></a>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p>&copy; 2025 Bunga Padi. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 hidden modal-backdrop">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 sm:p-8 modal-content transform scale-95">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="modal-title" class="text-2xl font-bold text-teal-600">Login Donatur</h2>
+                <button id="close-login-modal" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="login-email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="login-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="login-password" class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" id="login-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                <button type="submit" class="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition duration-300">Login</button>
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Belum punya akun? <a href="#" id="show-signup" class="text-teal-600 hover:underline">Daftar di sini</a>
+                </p>
+            </form>
+            <!-- Signup Form -->
+            <form id="signup-form" class="hidden">
+                 <div class="mb-4">
+                    <label for="signup-name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                    <input type="text" id="signup-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="signup-email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="signup-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="signup-password" class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" id="signup-password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                <button type="submit" class="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition duration-300">Daftar</button>
+                 <p class="text-center text-sm text-gray-600 mt-4">
+                    Sudah punya akun? <a href="#" id="show-login" class="text-teal-600 hover:underline">Login di sini</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div id="donate-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 hidden modal-backdrop">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-lg p-6 sm:p-8 modal-content transform scale-95">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-teal-600">Formulir Donasi</h2>
+                <button id="close-donate-modal" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <form id="donation-form">
+                <p class="mb-4 text-gray-700">Pilih nominal donasi Anda:</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                    <button type="button" class="donation-amount-btn border border-gray-300 py-3 rounded-lg hover:bg-teal-100 hover:border-teal-500 focus:bg-teal-100 focus:border-teal-500">Rp 50.000</button>
+                    <button type="button" class="donation-amount-btn border border-gray-300 py-3 rounded-lg hover:bg-teal-100 hover:border-teal-500 focus:bg-teal-100 focus:border-teal-500">Rp 100.000</button>
+                    <button type="button" class="donation-amount-btn border border-gray-300 py-3 rounded-lg hover:bg-teal-100 hover:border-teal-500 focus:bg-teal-100 focus:border-teal-500">Rp 250.000</button>
+                    <button type="button" class="donation-amount-btn border border-gray-300 py-3 rounded-lg hover:bg-teal-100 hover:border-teal-500 focus:bg-teal-100 focus:border-teal-500">Rp 500.000</button>
+                    <button type="button" class="donation-amount-btn border border-gray-300 py-3 rounded-lg hover:bg-teal-100 hover:border-teal-500 focus:bg-teal-100 focus:border-teal-500">Rp 1.000.000</button>
+                </div>
+                <div class="mb-4">
+                    <label for="custom-amount" class="block text-gray-700 mb-2">Atau masukkan nominal lain</label>
+                    <input type="number" id="custom-amount" placeholder="Contoh: 75000" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                 <div class="mb-4">
+                    <label for="donor-name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                    <input type="text" id="donor-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                 <div class="mb-4">
+                    <label for="donor-email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="donor-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                </div>
+                 <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Pilih Metode Pembayaran</label>
+                    <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <option>Transfer Bank</option>
+                        <option>GoPay</option>
+                        <option>OVO</option>
+                        <option>Kartu Kredit</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition duration-300 font-semibold">Lanjutkan Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="hidden fixed bottom-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg">
+        Terima kasih! Donasi Anda sangat berarti.
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loginBtn = document.getElementById('login-btn');
+        const loginModal = document.getElementById('login-modal');
+        const closeLoginModal = document.getElementById('close-login-modal');
+        const showSignup = document.getElementById('show-signup');
+        const showLogin = document.getElementById('show-login');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const modalTitle = document.getElementById('modal-title');
+        const authSection = document.getElementById('auth-section');
+
+        const donateBtns = document.querySelectorAll('.donate-btn');
+        const donateModal = document.getElementById('donate-modal');
+        const closeDonateModal = document.getElementById('close-donate-modal');
+        const donationForm = document.getElementById('donation-form');
+        const successMessage = document.getElementById('success-message');
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // --- Generic Modal Logic ---
+        function openModal(modal) {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+                modal.querySelector('.modal-content').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal(modal) {
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            modal.querySelector('.modal-content').classList.remove('scale-100');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // --- Login/Signup Modal ---
+        loginBtn.addEventListener('click', () => openModal(loginModal));
+        closeLoginModal.addEventListener('click', () => closeModal(loginModal));
+        
+        showSignup.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.classList.add('hidden');
+            signupForm.classList.remove('hidden');
+            modalTitle.textContent = 'Daftar Akun Baru';
+        });
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+            modalTitle.textContent = 'Login Donatur';
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const name = email.split('@')[0];
+            updateAuthUI(name);
+            closeModal(loginModal);
+        });
+        
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            updateAuthUI(name);
+            closeModal(loginModal);
+        });
+
+        function updateAuthUI(name) {
+            authSection.innerHTML = `
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-700">Halo, ${name}!</span>
+                    <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300">
+                        Logout
+                    </button>
+                </div>
+            `;
+            document.getElementById('logout-btn').addEventListener('click', logout);
+        }
+
+        function logout() {
+            authSection.innerHTML = `
+                <button id="login-btn" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition duration-300">
+                     <i class="fas fa-user mr-2"></i>Login
+                </button>
+            `;
+            // Re-add event listener to the new login button
+            document.getElementById('login-btn').addEventListener('click', () => openModal(loginModal));
+        }
+
+
+        // --- Donation Modal ---
+        donateBtns.forEach(btn => btn.addEventListener('click', () => openModal(donateModal)));
+        closeDonateModal.addEventListener('click', () => closeModal(donateModal));
+
+        donationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            closeModal(donateModal);
+            successMessage.classList.remove('hidden');
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 4000);
+        });
+        
+        const amountButtons = document.querySelectorAll('.donation-amount-btn');
+        const customAmountInput = document.getElementById('custom-amount');
+
+        amountButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Clear active state from all buttons
+                amountButtons.forEach(btn => {
+                    btn.classList.remove('bg-teal-100', 'border-teal-500', 'font-semibold');
+                });
+                // Set active state for clicked button
+                button.classList.add('bg-teal-100', 'border-teal-500', 'font-semibold');
+                customAmountInput.value = ''; // Clear custom amount
+            });
+        });
+
+        customAmountInput.addEventListener('input', () => {
+             // Clear active state from all buttons when typing custom amount
+            amountButtons.forEach(btn => {
+                btn.classList.remove('bg-teal-100', 'border-teal-500', 'font-semibold');
+            });
+        });
+        
+        // --- Mobile Menu ---
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Smooth Scrolling ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                // Fix: Only process clicks on links with valid target IDs (not just '#')
+                if (targetId.length > 1) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                         // Close mobile menu on click
+                        if (!mobileMenu.classList.contains('hidden')) {
+                             mobileMenu.classList.add('hidden');
+                        }
+                        // Adjust for sticky header height
+                        const headerOffset = document.getElementById('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }
+            });
+        });
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                closeModal(loginModal);
+            }
+            if (e.target === donateModal) {
+                closeModal(donateModal);
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>
+
